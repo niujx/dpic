@@ -56,11 +56,16 @@ ITEM_PIPELINES = {
     'pipelines.ShopItemPipeline': 100
 }
 
-CONCURRENT_REQUESTS = 20
+CONCURRENT_REQUESTS = 50
 
 DB_INFO = {
     'host': '172.16.18.203',
     'port': 30000
+}
+
+UGC_DB_INFO = {
+    'host': '172.16.80.121',
+    'port': 30001
 }
 
 DOWNLOAD_DELAY = 0.5

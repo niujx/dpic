@@ -19,7 +19,7 @@ class DpicSpider(Spider):
 
     def start_requests(self):
         shop_info_c = self.db.shop_info
-        for shop_info in shop_info_c.find({'http_code': {'$ne': 404}}):
+        for shop_info in shop_info_c.find({'http_code': {'$ne': 404}}, timeout=False):
             yield self.make_requests_from_url(shop_info['url'])
 
     def parse(self, response):
