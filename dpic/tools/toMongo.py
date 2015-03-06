@@ -3,7 +3,7 @@ from pymongo import Connection
 import re
 
 db = Connection(host='172.16.18.203', port=30000).dpic
-for line in open(r'/home/yanshi/1905.new', 'r'):
+for line in open(r'/home/yanshi/info_1901_new', 'r'):
     vals = line.split(',')
     m = re.search('(http://www.dianping.com/shop/\d+)', vals[1], re.I)
     if m:

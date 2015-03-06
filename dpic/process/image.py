@@ -77,7 +77,3 @@ class ImageDegreeProcess(object):
         if r.status_code == 200:
             return r
 
-
-if __name__ == '__main__':
-    for code, val in ImageDegreeProcess().process(pic_path='/home/yanshi/dpic/test/3.jpg'):
-        print code, val

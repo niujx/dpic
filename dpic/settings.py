@@ -74,7 +74,7 @@ LOG_PATH = '/home/yanshi/dpic_log/log'
 
 HTTPERROR_ALLOWED_CODES = [404]
 
-IMAGES_STORE = '/home/yanshi/dpic/image'
+IMAGES_STORE = '/home/yanshi/dpic/image/1901'
 
 # 图片处理接口
 IMAGE_PROCESS_CALL = 'http://172.16.104.128:8015/picHandle'

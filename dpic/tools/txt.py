@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'yanshi'
-import re
+from pymongo import MongoClient
 
-line = '"10：00——24:00",,,0,,,,0,,"8，21,70,53,343路到阳公桥站下",,,,,,"小吃快餐",,"钵钵鸡"'
-for a in re.findall('(".*?")', line, re.MULTILINE):
-    new = a.replace(",", "||||")
-    line = line.replace(a, new)
-
-print line
+client = MongoClient(host='172.16.18.203', port=30000)
+ugc = client.ugc
+print ugc.yanshi.test.save({'name': 'yanshi'})
